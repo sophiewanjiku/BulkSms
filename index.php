@@ -54,7 +54,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['authenticationCode']))
         exit;
     }
 
-    // Authentication successful, redirect to the dashboard
     header("Location: dashboard.html");
     exit;
 }
@@ -66,11 +65,9 @@ else if ($_SERVER["REQUEST_METHOD"] == "POST" && !isset($_POST['authenticationCo
     $email = $_POST['emailSignUp'];
     $phone = $_POST['PhoneSignUp'];
     $password = $_POST['passwordSignUp'];
-
-    // Generate a random authentication code
+    
     $authenticationCode = rand(1000, 9999);
 
-    // Insert user data and authentication code into the database
     $stmt = $conn->prepare("INSERT INTO users (username, email, phone, password, authentication_code) VALUES (?, ?, ?, ?, ?)");
     $stmt->bind_param("sssss", $username, $email, $phone, $password, $authenticationCode);
 

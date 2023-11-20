@@ -27,9 +27,7 @@ try {
 }
 
 
-// Retrieve the user's phone number and user ID from the database
 $userId = isset( $_SESSION['user_id']) ?  $_SESSION['user_id'] : null;
-var_dump($_GET); 
 $stmt = $db->prepare("SELECT phone FROM users WHERE id = ?");
 $stmt->execute([$userId]);
 
@@ -40,8 +38,7 @@ if ($user !== false && isset($user['phone'])) {
 
     // Retrieve the user's transaction history
     $transactionHistory = getTransactionHistoryForUser($userId, $db);
-
-    // Construct the SMS message based on transaction history
+    
     $message = "Dear user, your transaction history is:\n";
     foreach ($transactionHistory as $transaction) {
         $message .= "- " . $transaction['transaction_date'] . ": " . $transaction['amount'] . "\n";
@@ -78,11 +75,9 @@ function getTransactionHistoryForUser($userId, $db) {
     if ($stmt->rowCount() > 0) {
         // Fetch all transactions
         $transactions = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-        // Return the transactions array
+        
         return $transactions;
-    } else {
-        // Return an empty array if there are no transactions
+    } else {        
         return [];
     }
 }
