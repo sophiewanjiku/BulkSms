@@ -1,0 +1,139 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+/* Left Navigation Bar */
+.left-nav {
+    background-color: #333;
+    color: #fff;
+    width: 150px;
+    height: 100vh;
+    position: fixed;
+    top: 88px;
+}
+
+.logo img {
+    width: 80px;
+    height: 80px;
+    margin: 20px;
+}
+
+.nav-list {
+    list-style-type: none;
+    padding: 20;
+}
+
+.nav-list li {
+    padding: 15px 10px;
+}
+
+.nav-list li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-list li:hover {
+    background-color: #555;
+}
+
+.header {
+    background-color: #af4ca3;
+    color: #fff;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* z-index: 1000; */
+}
+
+/* Add styles for the dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-toggle {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #fff;
+    padding: 12px 16px;
+    display: block;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #555;
+}
+
+/* Show the dropdown when hovering over the dropdown container */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.user-profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.content-container {
+    margin-top: 60px; 
+    display: flex;
+    justify-content: space-between;
+}
+
+.center-content {
+    display: flex;
+    justify-content: center;
+}
+
+.savings-pie-chart,
+.loan-repayment-pie-chart {
+    width: 300px;
+    height: 300px;
+    margin: 20px;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 0px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .left-nav {
+        width: 100%;
+    }
+
+    .content-container {
+        flex-direction: column;
+    }
+
+    .savings-pie-chart,
+    .loan-repayment-pie-chart {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SACCO Dashboard</title>
+<link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+<div class="header">
+    <h1>Your Sacco Name</h1>
+    <img src="your_logo_path" alt="Sacco Logo">
+    <div class="user-profile">
+        <img src="user_profile_picture_path" alt="User Profile Picture">
+    </div>
+</div>
+
+    <div class="left-nav">
+        <div class="logo">
+            <img src="your_logo_path" alt="Sacco Logo">
+        </div>
+        <ul class="nav-list">
+            <li><a href="#"><img src="member_profile_icon_path" alt="Profile Icon"> Profile</a></li>
+            <li>
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle">
+                        <img src="transaction_history_icon_path" alt=""> Transaction History
+                    </a>
+                    <div class="dropdown-content">
+                        <a href="j2.php" onclick="sendTransactionHistory()">Get Transaction History</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+<!-- Center Section for Pie Charts -->
+<div class="center-content">
+    <div class="savings-pie-chart">
+        <!-- Add your pie chart representing user savings over time here -->
+    </div>
+    <div class="loan-repayment-pie-chart">
+        <!-- Add your pie chart representing the rate of loan repayment here -->
+    </div>
+</div>
+    <footer>
+        <p>&copy; 2023 Your SACCO Name</p>
+    </footer>
+<script src="script2.js"></script>
+</body>
+
+</html>
