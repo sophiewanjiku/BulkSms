@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="style2.css">
 </head>
 
-<body>
+<body class="container">
 <div class="header">
     <h1>Your Sacco Name</h1>
     <img src="your_logo_path" alt="Sacco Logo">
@@ -33,15 +33,20 @@
                     </div>
                 </div>
             </li>
+
+            <div>
+                <form action="sms.php" method="post" class="form">
+                    <input class="input1" placeholder="enter message" type="text" id="textInput" name="userText">
+                    <input class="btn1" value="submit" type="submit">
+                </form>
+            </div>
         </ul>
     </div>
+    
+    
 
-<div class="center-content">
-    <div class="savings-pie-chart">        
-    </div>
-    <div class="loan-repayment-pie-chart">
-    </div>
-</div>
+
+
     <footer>
         <p>&copy; 2023 Your SACCO Name</p>
     </footer>

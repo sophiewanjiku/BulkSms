@@ -31,11 +31,16 @@ $stmt->execute();
 
 $recipients = $stmt->fetchAll(PDO::FETCH_COLUMN);
 
-// Send SMS to users
-$message = "interest rates to go up by 15% from 01/12/23";
+// Retrieve the user's message from the form
+$userMessage = isset($_POST['userText']) ? $_POST['userText'] : "Default message if not provided";
+
+echo "User message: $userMessage";
+
+
+// Send SMS to users with the user's message
 $result = $sms->send([
     'to' => $recipients,
-    'message' => $message,
+    'message' => $userMessage,
 ]);
 
 // Handle the result (check if the SMS was sent successfully)
@@ -45,7 +50,5 @@ if ($result['status'] === "success") {
     echo "Error sending SMS: " . $result['status'];
 }
 
-// Close the database connection
 $db = null;
 ?>
-

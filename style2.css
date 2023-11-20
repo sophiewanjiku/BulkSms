@@ -45,7 +45,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* z-index: 1000; */
 }
 
 /* Add styles for the dropdown */
@@ -80,7 +79,6 @@ body {
     background-color: #555;
 }
 
-/* Show the dropdown when hovering over the dropdown container */
 .dropdown:hover .dropdown-content {
     display: block;
 }
@@ -91,10 +89,38 @@ body {
     border-radius: 50%;
 }
 
+.form {
+    width: 30%;
+    margin: auto;
+    justify-content: center;
+}
+
+.input1 {
+    width: 100%;
+    height: 30px;
+    border-radius: 10px;
+    border: unset;
+    background-color: #fbffd5;
+    color: #ff7388;
+    padding-left: 18px;
+}
+
+.btn1 {
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    border: unset;
+    height: 30px;
+    border-radius: 18px;
+    background-color: #29c200;
+    color: #ffffff;
+    cursor: pointer;
+}
+
 .content-container {
-    margin-top: 60px; 
+    margin-top: 60px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .center-content {
@@ -102,14 +128,6 @@ body {
     justify-content: center;
 }
 
-.savings-pie-chart,
-.loan-repayment-pie-chart {
-    width: 300px;
-    height: 300px;
-    margin: 20px;
-}
-
-/* Footer styles */
 footer {
     background-color: #333;
     color: #fff;
@@ -118,7 +136,6 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-
 }
 
 /* Responsive styles */
@@ -129,11 +146,5 @@ footer {
 
     .content-container {
         flex-direction: column;
-    }
-
-    .savings-pie-chart,
-    .loan-repayment-pie-chart {
-        margin-right: 0;
-        margin-bottom: 20px;
     }
 }

@@ -99,7 +99,6 @@ else if ($_SERVER["REQUEST_METHOD"] == "POST" && !isset($_POST['authenticationCo
             if ($result['status'] === 'success') {
                 echo "Data inserted successfully. Authentication code sent to your phone.";
 
-                // Display the form for the user to enter the authentication code
                 echo <<<HTML
                 <form method="post" action="">
                     <label for="authenticationCode">Enter Authentication Code:</label>
@@ -118,7 +117,6 @@ else if ($_SERVER["REQUEST_METHOD"] == "POST" && !isset($_POST['authenticationCo
         echo "Error: " . $stmt->error;
     }
 
-    // Close the statement
     $stmt->close();
 } else {
     echo "Error: Invalid form submission.";
